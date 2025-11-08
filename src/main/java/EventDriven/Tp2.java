@@ -14,11 +14,14 @@ public class Tp2 extends Application {
     public void start(Stage primaryStage){
         HBox pane = new HBox(10);
         pane.setAlignment(Pos.CENTER);
+
         Button btnOk = new Button("OK");
         btnOk.setOnAction(e -> System.out.println("Ok button clicked : " + e));
+
         Button btnCancel = new Button("Cancel");
         CancelHandlerClass handler2 = new CancelHandlerClass();
         btnCancel.setOnAction(handler2);
+        
         pane.getChildren().addAll(btnOk, btnCancel);
 
         Scene scene = new Scene(pane, 400, 300);
